@@ -24,59 +24,5 @@ namespace registradorDePersonajes.DAL
             this.conexion = new SqlConnection(this.cadenaConexion);
             return this.conexion;
         }
-
-        /*
-        // insert,update,delete
-        public bool cmdSinRetornoDatos(SqlCommand SqlComando)
-        {
-            try
-            {
-                SqlCommand comando = SqlComando;
-                comando.Connection = this.establecerConexion();
-
-                conexion.Open();
-                comando.ExecuteNonQuery();
-                conexion.Close();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                string mensaje = ex.Message;
-                return false;
-            }
-        }
-
-        // select 
-        public DataSet cmdConRetornoDatos(SqlCommand SqlComando)
-        {
-            // como es retorno de datos,ocupo algo para contener los datos
-            DataSet Ds = new DataSet();
-            // ocupo un adaptador
-            SqlDataAdapter Adaptador = new SqlDataAdapter();
-            try
-            {
-                // creo un objeto de tipo sqlcomand
-                SqlCommand cmd = new SqlCommand();
-                // recibo el comando a ejecutar
-                cmd = SqlComando;
-                // me conecto a la base de datos
-                cmd.Connection = this.establecerConexion();
-                // ejecuto el comando (creo)
-                Adaptador.SelectCommand = cmd;
-                // abro la conexion 
-                conexion.Open();
-                // ingreso la informacion obtenida en el data set
-                Adaptador.Fill(Ds);
-                // cierro la conexion
-                conexion.Close();
-                // retorno los datos obtenidos
-                return Ds;
-            }
-            catch (Exception ex)
-            {
-                string mensaje = ex.Message;
-                return Ds;
-            }
-        }*/
     }
 }
