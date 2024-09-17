@@ -1,0 +1,63 @@
+/* creacion de la base de datos */
+create database dbPersonajes;
+/* especifico la base de datos que voy a usar*/ 
+use dbPersonajes;
+
+/* creacion de las tablas */
+create table personajes (
+	personajeId smallint NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	nombre varchar(255),
+	vida int,
+	ataque int,
+	defensa int,
+	imagen image
+);
+
+/* creacion de los procedimientos almacenados*/
+create procedure sp_crearPersonaje
+	@nombre varchar(255),
+	@vida int,
+	@ataque int,
+	@defensa int,
+	@imagen image
+as
+	begin
+		insert into personajes(nombre,
+								vida,
+								ataque,
+								defensa,
+								imagen) 
+				values (@nombre,
+					    @vida,
+				        @ataque,
+				        @defensa,
+				        @imagen)
+	end
+go
+
+create procedure sp_verTodosPersonajes
+as
+	begin
+		select nombre,vida,ataque,defensa from personajes
+	end
+go
+
+create procedure sp_verPersonaje
+	@personajeId int
+as
+	begin 
+		select * from personajes where personajeId = @personajeId
+	end
+go
+
+create procedure sp_listaIdPersonajes
+as
+	begin 
+		select personajeId from personajes
+	end
+go
+
+
+
+
+
