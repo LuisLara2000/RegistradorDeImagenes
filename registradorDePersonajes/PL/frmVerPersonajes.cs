@@ -15,7 +15,7 @@ namespace registradorDePersonajes.PL
 {
     public partial class frmVerPersonajes : Form
     {
-        
+        public string salir = "SALIR";
         personajesDAL objPersonajesDAL;
         personajeBLL objPersonajeBLLRetornado;
         List<int> idTodosPersonaje;
@@ -47,7 +47,8 @@ namespace registradorDePersonajes.PL
         // Botones
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            if(indicePersonajeActual++<longitud)
+            
+            if (indicePersonajeActual++<longitud)
             {
                 objPersonajeBLLRetornado = objPersonajesDAL.obtenerUnPersonaje(idTodosPersonaje[indicePersonajeActual]);
                 cargarInformacionPersonajeActual();
@@ -62,6 +63,15 @@ namespace registradorDePersonajes.PL
 
         }
 
+        private void btnSiguiente_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnSiguiente.Image = Properties.Resources.flechaAjustada;
+        }
+
+        private void btnSiguiente_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnSiguiente.Image = Properties.Resources.flechaAjustadaAplastada;
+        }
         private void btnAnterior_Click(object sender, EventArgs e)
         {
             if (indicePersonajeActual-- > 0)
@@ -102,6 +112,48 @@ namespace registradorDePersonajes.PL
 
         }
 
+        // no sirve
+        private async void btnSiguiente_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+            
+        }
 
+        private void btnAnterior_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnAnterior.Image = Properties.Resources.flechaAjustadaAplastada2;
+        }
+
+        private void btnAnterior_MouseUp(object sender, MouseEventArgs e)
+        {
+            btnAnterior.Image = Properties.Resources.flechaAjustada2;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+           
+        }
+        // BOTON SALIR
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public string botonSeleccionado(string textoBoton, string icono)
+        {
+
+            string seleccionado = icono + " " + textoBoton + " " + icono;
+            return seleccionado;
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            button2.Text = botonSeleccionado(button2.Text, "#");
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.Text = salir;
+        }
     }
 }

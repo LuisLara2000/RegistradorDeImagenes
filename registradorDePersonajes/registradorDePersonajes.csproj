@@ -104,6 +104,41 @@
   <ItemGroup>
     <None Include="Resources\iconoAplicacion 256.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\tituloOficial.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaAjustada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaAjustadaAplastada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaAjustada2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaAjustadaAplastada2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espadas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escudo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

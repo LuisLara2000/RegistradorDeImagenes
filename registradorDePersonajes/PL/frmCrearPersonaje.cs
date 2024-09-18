@@ -15,8 +15,11 @@ using registradorDePersonajes.DAL;
 
 namespace registradorDePersonajes.PL
 {
+
     public partial class frmCrearPersonaje : Form
     {
+        public string salir = "SALIR";
+        public string crear = "CREAR";
         // aqui se contiene la imagen
         byte[] file = null;
 
@@ -38,7 +41,8 @@ namespace registradorDePersonajes.PL
                 // selecciono la imagen
                 
                 pbImagenPersonaje.Image = Image.FromStream(selectorImagen.OpenFile());
-
+                // configuro para que se vea correctamente
+                pbImagenPersonaje.SizeMode = PictureBoxSizeMode.StretchImage;
                 // abro la imagen
 
                 Stream myStream = selectorImagen.OpenFile();
@@ -59,6 +63,8 @@ namespace registradorDePersonajes.PL
             if (resultado)
             {
                 MessageBox.Show("PERSONAJE CREADO EXITOSAMENTE");
+                pbImagenPersonaje.SizeMode = PictureBoxSizeMode.CenterImage;
+                pbImagenPersonaje.Image = Properties.Resources.foro;
                 borrarDatosDeLaPantalla();
             }
             else
@@ -87,8 +93,55 @@ namespace registradorDePersonajes.PL
             txtDefensa.Text = "";
             txtNombre.Text = "";
             txtVida.Text = "";
-            pbImagenPersonaje.Image = null;
+            
     
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtVida_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCrearPersonaje_MouseHover(object sender, EventArgs e)
+        {
+           btnCrearPersonaje.Text = botonSeleccionado(btnCrearPersonaje.Text, "★");
+        }
+
+        private void btnSalir_MouseHover(object sender, EventArgs e)
+        {
+            btnSalir.Text = botonSeleccionado(btnSalir.Text, "#");
+        }
+
+        public string botonSeleccionado(string textoBoton, string icono)
+        {
+
+            string seleccionado = icono + " " + textoBoton + " " + icono;
+            return seleccionado;
+        }
+
+        private void btnCrearPersonaje_MouseLeave(object sender, EventArgs e)
+        {
+            btnCrearPersonaje.Text = crear;
+        }
+
+        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        {
+            btnSalir.Text = salir;
         }
     }
 }
