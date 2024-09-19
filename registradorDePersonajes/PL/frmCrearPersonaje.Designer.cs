@@ -62,7 +62,7 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Dubai", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.txtNombre.Location = new System.Drawing.Point(100, 9);
+            this.txtNombre.Location = new System.Drawing.Point(108, 9);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(207, 41);
             this.txtNombre.TabIndex = 1;
@@ -219,7 +219,7 @@
             // 
             // pbImagenPersonaje
             // 
-            this.pbImagenPersonaje.Image = global::registradorDePersonajes.Properties.Resources.foro;
+            this.pbImagenPersonaje.Image = global::registradorDePersonajes.Properties.Resources.foto;
             this.pbImagenPersonaje.Location = new System.Drawing.Point(11, 51);
             this.pbImagenPersonaje.Name = "pbImagenPersonaje";
             this.pbImagenPersonaje.Size = new System.Drawing.Size(300, 300);
@@ -231,7 +231,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.pictureBox4.Location = new System.Drawing.Point(101, 38);
+            this.pictureBox4.Location = new System.Drawing.Point(107, 38);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(200, 1);
             this.pictureBox4.TabIndex = 16;

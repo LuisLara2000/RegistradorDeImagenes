@@ -45,7 +45,7 @@
             this.btn_crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_crear.Font = new System.Drawing.Font("Dubai Light", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_crear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.btn_crear.Location = new System.Drawing.Point(30, 323);
+            this.btn_crear.Location = new System.Drawing.Point(31, 305);
             this.btn_crear.Margin = new System.Windows.Forms.Padding(0);
             this.btn_crear.Name = "btn_crear";
             this.btn_crear.Size = new System.Drawing.Size(549, 47);
@@ -78,7 +78,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Dubai Light", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.button1.Location = new System.Drawing.Point(31, 365);
+            this.button1.Location = new System.Drawing.Point(32, 347);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(549, 47);
@@ -99,8 +99,8 @@
             this.btn_salir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.Font = new System.Drawing.Font("Dubai Light", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.btn_salir.Location = new System.Drawing.Point(31, 407);
+            this.btn_salir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
+            this.btn_salir.Location = new System.Drawing.Point(32, 389);
             this.btn_salir.Margin = new System.Windows.Forms.Padding(0);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(549, 47);
@@ -117,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(618, 652);
+            this.ClientSize = new System.Drawing.Size(618, 752);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_crear);

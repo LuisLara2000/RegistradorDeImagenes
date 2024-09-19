@@ -49,6 +49,12 @@
     <Compile Include="BLL\personajeBLL.cs" />
     <Compile Include="DAL\conexionDAL.cs" />
     <Compile Include="DAL\personajesDAL.cs" />
+    <Compile Include="PL\frmAviso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAviso.Designer.cs">
+      <DependentUpon>frmAviso.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frmCrearPersonaje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\frmAviso.resx">
+      <DependentUpon>frmAviso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\frmCrearPersonaje.resx">
       <DependentUpon>frmCrearPersonaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +148,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\foro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correcto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,7 +63,6 @@ namespace registradorDePersonajes
                 frmVerPersonajes fVerPersonajes = new frmVerPersonajes();
                 fVerPersonajes.ShowDialog();
                 this.Show();
-                //MessageBox.Show("ya vine");
             }
 
         }
@@ -98,7 +97,7 @@ namespace registradorDePersonajes
 
         private void frmTitulo_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola");
+            //MessageBox.Show("Hola");
         }
 
 

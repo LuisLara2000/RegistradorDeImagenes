@@ -20,10 +20,12 @@ namespace registradorDePersonajes.PL
     {
         public string salir = "SALIR";
         public string crear = "CREAR";
+
         // aqui se contiene la imagen
         byte[] file = null;
 
         personajesDAL objPersonajesDAL;
+
         public frmCrearPersonaje()
         {
             objPersonajesDAL = new personajesDAL();
@@ -57,20 +59,39 @@ namespace registradorDePersonajes.PL
 
         private void btnCrearPersonaje_Click(object sender, EventArgs e)
         {
-            conexionDAL conexion = new conexionDAL();
-
-            bool resultado = objPersonajesDAL.agregarNuevoPersonaje(recolectarDatos());
-            if (resultado)
+            // validamos las entradas
+            if (validarDatos())
             {
-                MessageBox.Show("PERSONAJE CREADO EXITOSAMENTE");
-                pbImagenPersonaje.SizeMode = PictureBoxSizeMode.CenterImage;
-                pbImagenPersonaje.Image = Properties.Resources.foro;
-                borrarDatosDeLaPantalla();
+                conexionDAL conexion = new conexionDAL();
+                bool resultado = objPersonajesDAL.agregarNuevoPersonaje(recolectarDatos());
+                if (resultado)
+                {
+                    //MessageBox.Show("PERSONAJE CREADO EXITOSAMENTE");
+                    this.Hide();
+                    frmAviso fAviso = new frmAviso(0); // 0=proceso exitoso
+                    fAviso.ShowDialog();
+                    this.Show();
+                    pbImagenPersonaje.SizeMode = PictureBoxSizeMode.CenterImage;
+                    pbImagenPersonaje.Image = Properties.Resources.foto;
+                    borrarDatosDeLaPantalla();
+                }
+                else
+                {
+                    this.Hide();
+                    frmAviso fAviso = new frmAviso(1); // 1=proceso fallido
+                    fAviso.ShowDialog();
+                    this.Show();
+                    //MessageBox.Show("ERROR");
+                }
             }
             else
             {
-                MessageBox.Show("ERROR");
+                this.Hide();
+                frmAviso fAviso = new frmAviso(3); // 3=proceso con falta de datos
+                fAviso.ShowDialog();
+                this.Show();
             }
+
         }
 
         private personajeBLL recolectarDatos()
@@ -82,10 +103,26 @@ namespace registradorDePersonajes.PL
             objPersonajeBLL.vida = Convert.ToInt32(txtVida.Text);
             objPersonajeBLL.ataque = Convert.ToInt32(txtAtaque.Text);
             objPersonajeBLL.defensa = Convert.ToInt32(txtDefensa.Text);
-            // se guarda en una base de dtaos
+            // se guarda en una base de datos
             objPersonajeBLL.imagen = file;
             return objPersonajeBLL;
         }
+
+        private bool validarDatos()
+        {
+            
+            if (txtNombre.Text == "" || txtDefensa.Text == "" || txtAtaque.Text == "" || txtVida.Text == "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+            
+        }
+
 
         private void borrarDatosDeLaPantalla()
         {
