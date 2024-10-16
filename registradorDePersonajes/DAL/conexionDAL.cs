@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Security.Policy;
-
+/**/
 
 
 namespace registradorDePersonajes.DAL
